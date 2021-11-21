@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ainul"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-21 11:22:19 PM"/>
+        <attribute name="created" value="YWludWw7c3VwZXJjb21wdXRlcjsyMDIxLTExLTIxOzEwOjQwOjEwIFBNOzMyMzU="/>
+        <attribute name="edited" value="YWludWw7c3VwZXJjb21wdXRlcjsyMDIxLTExLTIxOzExOjIyOjE5IFBNOzk7MzM2MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="from, interval, to" type="Integer" array="False" size=""/>
+            <declare name="acc, total" type="Integer" array="False" size=""/>
+            <declare name="sumAcc, fold" type="Integer" array="False" size=""/>
+            <declare name="isMinus" type="Boolean" array="False" size=""/>
+            <output expression="&quot;===== Deret Matematika Cerdas =====&quot;" newline="True"/>
+            <output expression="&quot;Masukkan mulai&quot;" newline="True"/>
+            <input variable="from"/>
+            <output expression="&quot;Masukkan interval&quot;" newline="True"/>
+            <input variable="interval"/>
+            <output expression="&quot;Masukkan banyak bilangan&quot;" newline="True"/>
+            <input variable="to"/>
+            <assign variable="isMinus" expression="0 &gt; interval"/>
+            <assign variable="acc" expression="from"/>
+            <output expression="&quot;proses hitung penjumlahan&quot;" newline="True"/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <for variable="index" start="0" end="(to-1)" direction="inc" step="1">
+                <if expression="index == 0">
+                    <then>
+                        <output expression="acc" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="isMinus">
+                            <then>
+                                <output expression="&quot;+(&quot; &amp; acc &amp; &quot;)&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;+&quot; &amp; acc" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="acc" expression="acc+interval"/>
+            </for>
+            <assign variable="total" expression="(1+(interval*0.5)*(to-1))*to"/>
+            <output expression="&quot;Hasil penjumlahan = &quot; &amp; total" newline="True"/>
+            <output expression="&quot;proses hitung perkalian&quot;" newline="True"/>
+            <assign variable="sumAcc" expression="from"/>
+            <assign variable="fold" expression="from"/>
+            <for variable="index" start="0" end="(to-1)" direction="inc" step="1">
+                <assign variable="fold" expression="fold*sumAcc"/>
+                <if expression="index == 0">
+                    <then>
+                        <output expression="sumAcc" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="isMinus">
+                            <then>
+                                <output expression="&quot;x(&quot; &amp; sumAcc &amp; &quot;)&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;x&quot; &amp; sumAcc" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="sumAcc" expression="sumAcc+interval"/>
+            </for>
+            <output expression="&quot;Hasil perkalian = &quot; &amp; fold" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

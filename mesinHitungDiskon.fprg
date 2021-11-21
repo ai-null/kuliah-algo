@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ainul"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-21 10:39:31 PM"/>
+        <attribute name="created" value="YWludWw7c3VwZXJjb21wdXRlcjsyMDIxLTExLTIxOzA5OjU4OjE0IFBNOzMyNTY="/>
+        <attribute name="edited" value="YWludWw7c3VwZXJjb21wdXRlcjsyMDIxLTExLTIxOzEwOjM5OjMxIFBNOzExOzM0MDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="price" type="Integer" array="False" size=""/>
+            <assign variable="price" expression="650000"/>
+            <declare name="disc, grossPrice" type="Real" array="False" size=""/>
+            <declare name="qty, change, totalPayment, netPrice, balance" type="Integer" array="False" size=""/>
+            <declare name="isCustomer" type="String" array="False" size=""/>
+            <output expression="&quot;=========== SELAMAT DATANG DI TOKO BUTIK PANTES=================&quot;" newline="True"/>
+            <output expression="&quot;Harga baju = Rp.&quot; &amp; price &amp; &quot;-&quot;" newline="True"/>
+            <output expression="&quot;Masukkan QTY pembelian baju&quot;" newline="True"/>
+            <input variable="qty"/>
+            <output expression="&quot;Apakah anda pelanggan, ketik P jika ya-pelanggan dan Ketik T-jika tidak&quot;" newline="True"/>
+            <input variable="isCustomer"/>
+            <output expression="&quot;Proses Perhitungan dan Diskon&quot;" newline="True"/>
+            <if expression="isCustomer == &quot;p&quot; || isCustomer == &quot;P&quot;">
+                <then>
+                    <assign variable="disc" expression="0.3"/>
+                    <assign variable="grossPrice" expression="(qty*price)*disc"/>
+                    <output expression="&quot;Total diskon = &quot; &amp; grossPrice" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="grossPrice" expression="0"/>
+                </else>
+            </if>
+            <assign variable="netPrice" expression="qty*price"/>
+            <output expression="&quot;Total Harga = &quot;&amp; netPrice" newline="True"/>
+            <output expression="&quot;Total pembayaran = &quot; &amp; (netPrice - grossPrice)" newline="True"/>
+            <output expression="&quot;Total Uang anda&quot;" newline="True"/>
+            <input variable="totalPayment"/>
+            <assign variable="balance" expression="(totalPayment - (netPrice-grossPrice))"/>
+            <if expression="balance &lt; 0">
+                <then>
+                    <output expression="&quot;Maaf, uang anda belum cukup :(&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Kembalian = &quot; &amp; balance" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
