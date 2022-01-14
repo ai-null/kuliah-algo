@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ainul"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-14 11:07:58 PM"/>
+        <attribute name="created" value="YWludWw7U1VQRVJDT01QVVRFUjsyMDIxLTEyLTE0OzExOjAzOjExIFBNOzI4MjM="/>
+        <attribute name="edited" value="YWludWw7U1VQRVJDT01QVVRFUjsyMDIxLTEyLTE0OzExOjA3OjU4IFBNOzE7Mjk0Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="index, sisi, interval, sampaiDgn" type="Integer" array="False" size=""/>
+            <assign variable="sisi" expression="5"/>
+            <assign variable="interval" expression="2"/>
+            <assign variable="sampaiDgn" expression="10"/>
+            <for variable="index" start="1" end="sampaiDgn" direction="inc" step="1">
+                <declare name="hasil" type="Integer" array="False" size=""/>
+                <assign variable="hasil" expression="luasPersegi(sisi)"/>
+                <output expression="&quot;Hasil luas persegi dari panjang sisi=&quot;&amp; sisi &amp;&quot;cm adalah &quot;&amp; hasil &amp;&quot;cm&quot;" newline="True"/>
+                <assign variable="sisi" expression="sisi*interval"/>
+            </for>
+        </body>
+    </function>
+    <function name="luasPersegi" type="Integer" variable="hasil">
+        <parameters>
+            <parameter name="sisi" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hasil" type="Integer" array="False" size=""/>
+            <assign variable="hasil" expression="sisi * sisi"/>
+        </body>
+    </function>
+</flowgorithm>

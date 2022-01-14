@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ainul"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-14 11:02:52 PM"/>
+        <attribute name="created" value="YWludWw7U1VQRVJDT01QVVRFUjsyMDIxLTEyLTE0OzEwOjUzOjU3IFBNOzI4Mzc="/>
+        <attribute name="edited" value="YWludWw7U1VQRVJDT01QVVRFUjsyMDIxLTEyLTE0OzExOjAyOjUyIFBNOzE7MjkzNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="alas, tinggi, hasil" type="Integer" array="False" size=""/>
+            <assign variable="alas" expression="7"/>
+            <assign variable="tinggi" expression="4"/>
+            <assign variable="hasil" expression="luasJajarGenjang(alas, tinggi)"/>
+            <output expression="&quot;Luas jajar genjang dari alas=&quot; &amp; alas &amp; &quot; dan tinggi=&quot; &amp; tinggi &amp; &quot; adalah &quot; &amp; hasil" newline="True"/>
+        </body>
+    </function>
+    <function name="luasJajarGenjang" type="Integer" variable="hasil">
+        <parameters>
+            <parameter name="alas" type="Integer" array="False"/>
+            <parameter name="tinggi" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hasil" type="Integer" array="False" size=""/>
+            <assign variable="hasil" expression="alas * tinggi"/>
+        </body>
+    </function>
+</flowgorithm>

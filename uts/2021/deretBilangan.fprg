@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="ainul"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-11-21 11:22:19 PM"/>
+        <attribute name="saved" value="2021-11-24 08:43:39 PM"/>
         <attribute name="created" value="YWludWw7c3VwZXJjb21wdXRlcjsyMDIxLTExLTIxOzEwOjQwOjEwIFBNOzMyMzU="/>
-        <attribute name="edited" value="YWludWw7c3VwZXJjb21wdXRlcjsyMDIxLTExLTIxOzExOjIyOjE5IFBNOzk7MzM2MQ=="/>
+        <attribute name="edited" value="YWludWw7c3VwZXJjb21wdXRlcjsyMDIxLTExLTI0OzA4OjQzOjM5IFBNOzE2OzM0MjE="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -44,11 +44,11 @@
                 </if>
                 <assign variable="acc" expression="acc+interval"/>
             </for>
-            <assign variable="total" expression="(1+(interval*0.5)*(to-1))*to"/>
+            <assign variable="total" expression="(from+((interval*0.5)*(to-1)))*to"/>
             <output expression="&quot;Hasil penjumlahan = &quot; &amp; total" newline="True"/>
             <output expression="&quot;proses hitung perkalian&quot;" newline="True"/>
             <assign variable="sumAcc" expression="from"/>
-            <assign variable="fold" expression="from"/>
+            <assign variable="fold" expression="1"/>
             <for variable="index" start="0" end="(to-1)" direction="inc" step="1">
                 <assign variable="fold" expression="fold*sumAcc"/>
                 <if expression="index == 0">
