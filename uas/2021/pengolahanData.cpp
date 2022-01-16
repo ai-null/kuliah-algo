@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-using namespace std;
-
 // Dengan menggunakan program carilah:
 // a. Siapa yang mendapatkan nilai tertinggi dari pelajaran matematika
 // b. Siapa yang mendapatkan nilai Terendah dari pelajaran IPA
