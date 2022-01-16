@@ -17,11 +17,10 @@ int listNilai[10] = {};
 
 void convertCelciusToFarenheit()
 {
+    printf("F = ");
     for (int i = 0; i < size; i++)
     {
         float result = (9.0 / 5.0 * listNilai[i]) + 32;
-        if (i == 0)
-            cout << "F = ";
 
         cout << result << "\u02DA";
         if (i != size - 1)
@@ -31,11 +30,10 @@ void convertCelciusToFarenheit()
 
 void convertCelciusToReamur()
 {
+    printf("R = ");
     for (int i = 0; i < size; i++)
     {
         float result = listNilai[i] * (4.0 / 5.0);
-        if (i == 0)
-            cout << "R = ";
 
         cout << result << "\u02DA";
         if (i != size - 1)
@@ -67,7 +65,7 @@ int main()
 {
     string instructions = "\nKetik F atau f untuk konversi suhu menuju Fahrenheit";
     instructions.append("\nKetik R atau r untuk konversi suhu menuju Reamur");
-    instructions.append("\nKetik A atau a untuk mencari rata-rata (average)");
+    // instructions.append("\nKetik A atau a untuk mencari rata-rata (average)");
     instructions.append("\nSilahkan ketik huruf/alfabet dari menu yang tersedia : ");
 
     char input;
